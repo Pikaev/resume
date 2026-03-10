@@ -11,14 +11,11 @@
       name="description"
       content="Резюме Frontend-разработчика (React/TypeScript)"
     />
-    <!-- Подключаем Tailwind CSS через CDN для быстрого старта -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      /* Плавная прокрутка для якорных ссылок */
       html {
         scroll-behavior: smooth;
       }
-      /* Стили для печати (Ctrl+P) */
       @media print {
         .no-print {
           display: none;
@@ -33,9 +30,7 @@
     </style>
   </head>
   <body class="bg-gray-50 text-gray-800 font-sans antialiased">
-    <!-- Контейнер по центру, макс. ширина для удобства чтения -->
     <div class="max-w-4xl mx-auto px-6 py-12">
-      <!-- HEADER -->
       <header class="mb-12 print-break">
         <h1 class="text-4xl font-bold text-gray-900 mb-2">Сергей Пикаев</h1>
         <p class="text-xl text-blue-600 font-medium mb-4">
@@ -56,7 +51,6 @@
           >
         </div>
 
-        <!-- Кнопки действий -->
         <div class="flex gap-3 mt-6 no-print">
           <button
             onclick="window.print()"
@@ -64,12 +58,9 @@
           >
             Скачать PDF / Печать
           </button>
-          <!-- Если есть GitHub, раскомментируй кнопку ниже -->
-          <!-- <a href="https://github.com/твой-ник" target="_blank" class="px-4 py-2 border border-gray-300 rounded hover:bg-gray-100 transition">GitHub</a> -->
         </div>
       </header>
 
-      <!-- О СЕБЕ -->
       <section class="mb-10 print-break">
         <h2
           class="text-lg font-bold text-gray-900 border-b-2 border-blue-600 pb-1 mb-4 uppercase tracking-wide"
@@ -85,7 +76,6 @@
         </p>
       </section>
 
-      <!-- НАВЫКИ -->
       <section class="mb-10 print-break">
         <h2
           class="text-lg font-bold text-gray-900 border-b-2 border-blue-600 pb-1 mb-4 uppercase tracking-wide"
@@ -150,7 +140,6 @@
         </div>
       </section>
 
-      <!-- ОПЫТ РАБОТЫ -->
       <section class="mb-10 print-break">
         <h2
           class="text-lg font-bold text-gray-900 border-b-2 border-blue-600 pb-1 mb-6 uppercase tracking-wide"
@@ -158,7 +147,6 @@
           Опыт работы
         </h2>
 
-        <!-- Место работы 1 -->
         <div class="mb-8">
           <div
             class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2"
@@ -189,7 +177,6 @@
           </ul>
         </div>
 
-        <!-- Место работы 2 -->
         <div class="mb-8">
           <div
             class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2"
@@ -213,7 +200,6 @@
         </div>
       </section>
 
-      <!-- ОБРАЗОВАНИЕ -->
       <section class="mb-10 print-break">
         <h2
           class="text-lg font-bold text-gray-900 border-b-2 border-blue-600 pb-1 mb-4 uppercase tracking-wide"
@@ -238,7 +224,6 @@
         </div>
       </section>
 
-      <!-- ПРОЕКТЫ -->
       <section class="mb-10 print-break">
         <h2
           class="text-lg font-bold text-gray-900 border-b-2 border-blue-600 pb-1 mb-4 uppercase tracking-wide"
@@ -255,13 +240,11 @@
           <p class="text-gray-700 text-sm">
             Полноценное веб-приложение с авторизацией, работой с сервером и
             кэшированием данных.
-            <!-- Если выложишь код на GitHub, добавь ссылку здесь -->
             <!-- <a href="#" class="text-blue-600 hover:underline">Посмотреть код →</a> -->
           </p>
         </div>
       </section>
 
-      <!-- FOOTER -->
       <footer
         class="pt-8 border-t border-gray-200 text-center text-sm text-gray-500 no-print"
       >
