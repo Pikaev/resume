@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Сергей Пикаев — Frontend Developer</title>
+    <meta
+      name="description"
+      content="Резюме Frontend-разработчика (React/TypeScript)"
+    />
+    <!-- Подключаем Tailwind CSS через CDN для быстрого старта -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Плавная прокрутка для якорных ссылок */
+      html {
+        scroll-behavior: smooth;
+      }
+      /* Стили для печати (Ctrl+P) */
+      @media print {
+        .no-print {
+          display: none;
+        }
+        body {
+          background: white;
+        }
+        .print-break {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans antialiased">
+    <!-- Контейнер по центру, макс. ширина для удобства чтения -->
+    <div class="max-w-4xl mx-auto px-6 py-12">
+      <!-- HEADER -->
+      <header class="mb-12 print-break">
+        <h1 class="text-4xl font-bold text-gray-900 mb-2">Сергей Пикаев</h1>
+        <p class="text-xl text-blue-600 font-medium mb-4">
+          Frontend Developer (React / TypeScript)
+        </p>
+
+        <div class="flex flex-wrap gap-4 text-sm text-gray-600">
+          <span>📍 Саранск (готов к Remote/Relocation)</span>
+          <span>📞 +7 927 970-44-84</span>
+          <span>✉️ yapikay@ya.ru</span>
+          <span
+            >✈️
+            <a
+              href="https://t.me/pikaay"
+              class="text-blue-600 hover:underline"
+              >@pikaay</a
+            ></span
+          >
+        </div>
+
+        <!-- Кнопки действий -->
+        <div class="flex gap-3 mt-6 no-print">
+          <button
+            onclick="window.print()"
+            class="px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-700 transition"
+          >
+            Скачать PDF / Печать
+          </button>
+          <!-- Если есть GitHub, раскомментируй кнопку ниже -->
+          <!-- <a href="https://github.com/твой-ник" target="_blank" class="px-4 py-2 border border-gray-300 rounded hover:bg-gray-100 transition">GitHub</a> -->
+        </div>
+      </header>
+
+      <!-- О СЕБЕ -->
+      <section class="mb-10 print-break">
+        <h2
+          class="text-lg font-bold text-gray-900 border-b-2 border-blue-600 pb-1 mb-4 uppercase tracking-wide"
+        >
+          Обо мне
+        </h2>
+        <p class="text-gray-700 leading-relaxed">
+          Frontend-разработчик уровня Middle с опытом коммерческой разработки
+          более 3 лет. Специализируюсь на создании производительных интерфейсов
+          на стеке React/TypeScript. В 2025 году успешно завершил продвинутый
+          курс Яндекс.Практикума. Имею опыт работы в QA, что позволяет писать
+          более надежный код и эффективно взаимодействовать с командой.
+        </p>
+      </section>
+
+      <!-- НАВЫКИ -->
+      <section class="mb-10 print-break">
+        <h2
+          class="text-lg font-bold text-gray-900 border-b-2 border-blue-600 pb-1 mb-4 uppercase tracking-wide"
+        >
+          Навыки
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">Core & Frontend</h3>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
+                >JavaScript (ES6+)</span
+              >
+              <span
+                class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
+                >TypeScript</span
+              >
+              <span
+                class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
+                >React 18/19</span
+              >
+              <span
+                class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
+                >Next.js 14/15</span
+              >
+              <span
+                class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
+                >Redux Toolkit</span
+              >
+              <span
+                class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
+                >React Query</span
+              >
+            </div>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">Tools & Other</h3>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 bg-gray-200 text-gray-800 rounded-full text-sm"
+                >Tailwind CSS</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-200 text-gray-800 rounded-full text-sm"
+                >Jest / Playwright</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-200 text-gray-800 rounded-full text-sm"
+                >Git / Docker</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-200 text-gray-800 rounded-full text-sm"
+                >Webpack</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-200 text-gray-800 rounded-full text-sm"
+                >English B1/B2</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ОПЫТ РАБОТЫ -->
+      <section class="mb-10 print-break">
+        <h2
+          class="text-lg font-bold text-gray-900 border-b-2 border-blue-600 pb-1 mb-6 uppercase tracking-wide"
+        >
+          Опыт работы
+        </h2>
+
+        <!-- Место работы 1 -->
+        <div class="mb-8">
+          <div
+            class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2"
+          >
+            <h3 class="text-xl font-bold text-gray-900">
+              Frontend Developer (React)
+            </h3>
+            <span class="text-sm text-gray-500">Июнь 2022 — Февраль 2025</span>
+          </div>
+          <div class="text-blue-600 font-medium mb-3">
+            Рельеф-Центр | Саранск / Remote
+          </div>
+          <ul class="list-disc list-inside space-y-2 text-gray-700">
+            <li>Разработка E-commerce платформы (React, Next.js SSR).</li>
+            <li>
+              Внедрил Tailwind CSS и Atomic Design, ускорив верстку новых
+              компонентов.
+            </li>
+            <li>
+              Настроил E2E-тесты (Playwright) и Unit-тесты (Jest), снизил
+              количество регрессий.
+            </li>
+            <li>
+              Выделил крупные домены в отдельные сервисы, упростил поддержку
+              legacy.
+            </li>
+            <li>Проводил Code Review и менторил младших разработчиков.</li>
+          </ul>
+        </div>
+
+        <!-- Место работы 2 -->
+        <div class="mb-8">
+          <div
+            class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2"
+          >
+            <h3 class="text-xl font-bold text-gray-900">
+              QA Engineer (Внутренний перевод)
+            </h3>
+            <span class="text-sm text-gray-500">Март 2025 — Наст. время</span>
+          </div>
+          <div class="text-blue-600 font-medium mb-3">
+            Рельеф-Центр | Саранск / Remote
+          </div>
+          <ul class="list-disc list-inside space-y-2 text-gray-700">
+            <li>Обеспечение качества релизов frontend-части продукта.</li>
+            <li>Поддержка автотестов (Playwright/Cypress).</li>
+            <li>
+              Взаимодействие с командой разработки, участие в планировании
+              тестирования.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ОБРАЗОВАНИЕ -->
+      <section class="mb-10 print-break">
+        <h2
+          class="text-lg font-bold text-gray-900 border-b-2 border-blue-600 pb-1 mb-4 uppercase tracking-wide"
+        >
+          Образование
+        </h2>
+        <div class="space-y-4">
+          <div>
+            <div class="font-bold text-gray-900">
+              Яндекс.Практикум — Мидл фронтенд-разработчик
+            </div>
+            <div class="text-sm text-gray-500">
+              2025 | Удостоверение № 2025-10775-001
+            </div>
+          </div>
+          <div>
+            <div class="font-bold text-gray-900">
+              Мордовский государственный университет им. Н.П. Огарёва
+            </div>
+            <div class="text-sm text-gray-500">2014 | Журналистика</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ПРОЕКТЫ -->
+      <section class="mb-10 print-break">
+        <h2
+          class="text-lg font-bold text-gray-900 border-b-2 border-blue-600 pb-1 mb-4 uppercase tracking-wide"
+        >
+          Проекты
+        </h2>
+        <div class="border-l-4 border-blue-200 pl-4 py-2">
+          <div class="font-bold text-gray-900">
+            Учебный проект (Диплом Яндекс.Практикум)
+          </div>
+          <div class="text-sm text-gray-500 mb-2">
+            Май 2025 | React, TypeScript, Next.js (App Router)
+          </div>
+          <p class="text-gray-700 text-sm">
+            Полноценное веб-приложение с авторизацией, работой с сервером и
+            кэшированием данных.
+            <!-- Если выложишь код на GitHub, добавь ссылку здесь -->
+            <!-- <a href="#" class="text-blue-600 hover:underline">Посмотреть код →</a> -->
+          </p>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer
+        class="pt-8 border-t border-gray-200 text-center text-sm text-gray-500 no-print"
+      >
+        <p>Готов к обсуждению возможностей и тестовому заданию.</p>
+      </footer>
+    </div>
+  </body>
+</html>
