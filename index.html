@@ -37,20 +37,65 @@
           Frontend Developer (React / TypeScript)
         </p>
 
-        <div class="flex flex-wrap gap-4 text-sm text-gray-600">
-          <span>📍 Саранск (удаленно: регионы РФ, кроме Мск/СПб)</span>
-          <span>📞 +7 927 970-44-84</span>
-          <span>✉️ yapikay@ya.ru</span>
-          <span
-            >✈️
+        <ul class="text-sm text-gray-600 space-y-2">
+          <li>📍 Саранск (удаленно: регионы РФ, кроме Мск/СПб)</li>
+          <li class="flex items-center gap-2">
+            📞
+            <a
+              href="tel:+79279704484"
+              class="text-blue-600 hover:underline"
+            >
+              +7 927 970-44-84
+            </a>
+            <button
+              type="button"
+              data-copy-text="+7 927 970-44-84"
+              data-feedback-id="copy-phone-feedback"
+              class="px-2 py-0.5 rounded border border-gray-300 text-xs text-gray-600 hover:bg-gray-100 transition"
+              aria-label="Скопировать телефон"
+            >
+              копировать
+            </button>
+            <span
+              id="copy-phone-feedback"
+              class="text-xs text-green-600 inline-block w-20 opacity-0 transition-opacity"
+              >Скопировано</span
+            >
+          </li>
+          <li class="flex items-center gap-2">
+            ✉️
+            <a
+              href="mailto:yapikay@ya.ru"
+              class="text-blue-600 hover:underline"
+            >
+              yapikay@ya.ru
+            </a>
+            <button
+              type="button"
+              data-copy-text="yapikay@ya.ru"
+              data-feedback-id="copy-email-feedback"
+              class="px-2 py-0.5 rounded border border-gray-300 text-xs text-gray-600 hover:bg-gray-100 transition"
+              aria-label="Скопировать email"
+            >
+              копировать
+            </button>
+            <span
+              id="copy-email-feedback"
+              class="text-xs text-green-600 inline-block w-20 opacity-0 transition-opacity"
+              >Скопировано</span
+            >
+          </li>
+          <li class="flex items-center gap-2">
+            Telegram:
             <a
               href="https://t.me/pikaay"
               class="text-blue-600 hover:underline"
               target="_blank"
+              rel="noopener noreferrer"
               >@pikaay</a
-            ></span
-          >
-        </div>
+            >
+          </li>
+        </ul>
 
         <div class="flex gap-3 mt-6 no-print">
           <button
@@ -406,8 +451,40 @@
       <footer
         class="pt-8 border-t border-gray-200 text-center text-sm text-gray-500 no-print"
       >
-        <p>Готов к обсуждению возможностей и тестовому заданию.</p>
+        <p>Готов к обсуждению возможностей и тестовому заданию</p>
       </footer>
     </div>
+    <script>
+      ;(() => {
+        const copyButtons = document.querySelectorAll('[data-copy-text]')
+        const timers = new Map()
+
+        copyButtons.forEach((button) => {
+          button.addEventListener('click', async () => {
+            const textToCopy = button.getAttribute('data-copy-text')
+            const feedbackId = button.getAttribute('data-feedback-id')
+            const feedback = feedbackId
+              ? document.getElementById(feedbackId)
+              : null
+
+            if (!textToCopy || !feedback) return
+
+            try {
+              await navigator.clipboard.writeText(textToCopy)
+              feedback.classList.remove('opacity-0')
+              clearTimeout(timers.get(feedbackId))
+              timers.set(
+                feedbackId,
+                setTimeout(() => {
+                  feedback.classList.add('opacity-0')
+                }, 1200)
+              )
+            } catch (error) {
+              console.error('Failed to copy contact:', error)
+            }
+          })
+        })
+      })()
+    </script>
   </body>
 </html>
