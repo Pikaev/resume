@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -81,7 +81,6 @@
             <span>Саранск / Remote</span>
           </li>
           <li class="flex items-center gap-2">
-            📞
             <a
               href="tel:+79279704484"
               class="text-blue-600 hover:underline"
@@ -170,8 +169,10 @@
           года коммерческой разработки на React/TypeScript. Специализируюсь на
           продуктовых интерфейсах, надежной архитектуре и качестве релизов.
           Комбинация frontend + QA помогает заранее снижать риски регрессий.
-          Использую AI-инструменты (Cursor, Copilot) для ускорения рутины с
-          обязательным ручным ревью решений.
+          Использую AI-инструменты (Cursor, Copilot) для ускорения рутины и
+          генерации бойлерплейта, но архитектурные решения, работу с замыканиями
+          и иммутабельностью контролирую вручную. Понимаю trade-offs технологий,
+          а не просто следую туториалам.
         </p>
 
         <p class="text-gray-700 leading-relaxed">
@@ -232,8 +233,46 @@
                 class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
                 >Zustand</span
               >
+              <span
+                class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
+                >Zod (Runtime Validation)</span
+              >
             </div>
           </div>
+
+          <!-- Backend & Infrastructure -->
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">
+              Backend & Infrastructure
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm"
+                >Node.js / Express</span
+              >
+              <span
+                class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm"
+                >PostgreSQL / SQL</span
+              >
+              <span
+                class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm"
+                >REST API Design</span
+              >
+              <span
+                class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm"
+                >Sequelize ORM</span
+              >
+              <span
+                class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm"
+                >OAuth 2.0 / JWT</span
+              >
+              <span
+                class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm"
+                >Docker</span
+              >
+            </div>
+          </div>
+
           <div>
             <h3 class="font-semibold text-gray-900 mb-2">QA & Testing</h3>
             <div class="flex flex-wrap gap-2">
@@ -259,6 +298,7 @@
               >
             </div>
           </div>
+
           <div>
             <h3 class="font-semibold text-gray-900 mb-2">Tools & DevOps</h3>
             <div class="flex flex-wrap gap-2">
@@ -269,10 +309,6 @@
               <span
                 class="px-3 py-1 bg-gray-200 text-gray-800 rounded-full text-sm"
                 >Git</span
-              >
-              <span
-                class="px-3 py-1 bg-gray-200 text-gray-800 rounded-full text-sm"
-                >Docker</span
               >
               <span
                 class="px-3 py-1 bg-gray-200 text-gray-800 rounded-full text-sm"
@@ -288,17 +324,7 @@
               >
             </div>
           </div>
-          <div>
-            <h3 class="font-semibold text-gray-900 mb-2">Frameworks</h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
-                React / Next.js (Commercial)
-              </span>
-              <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm border border-dashed border-gray-400">
-                Angular (Базовый, готов к обучению)
-              </span>
-            </div>
-          </div>
+
           <div>
             <h3 class="font-semibold text-gray-900 mb-2">Other</h3>
             <div class="flex flex-wrap gap-2">
@@ -383,7 +409,6 @@
               Настроил E2E-тесты (Playwright) и Unit-тесты (Jest): число
               регрессионных багов на релиз снизилось примерно с ~10 до ~2-3.
             </li>
-
             <li>
               Выделил крупные домены в отдельные сервисы и упростил поддержку
               legacy, сократив time-to-fix по инцидентам.
@@ -415,7 +440,7 @@
             <h3 class="text-xl font-bold text-gray-900">
               Frontend Developer / QA Automation (Cross-functional)
             </h3>
-            <span class="text-sm text-gray-500">Март 2025 — Апрель 2026</span>
+            <span class="text-sm text-gray-500">Март 2025 — Май 2026</span>
           </div>
           <div class="text-blue-600 font-medium mb-3">
             Рельеф-Центр | Рязань / Remote
@@ -471,25 +496,64 @@
         >
           Проекты
         </h2>
-        <div class="border-l-4 border-blue-200 pl-4 py-2">
-          <div class="font-bold text-gray-900">
-            Учебный проект (Диплом Яндекс.Практикум)
+
+        <!-- Проект 1: Бэкенд из Яндекса (Minesweeper) -->
+        <div class="border-l-4 border-purple-600 pl-4 py-2 mb-6">
+          <div
+            class="font-bold text-gray-900 flex flex-col md:flex-row md:items-center gap-2"
+          >
+            <span
+              >Fullstack проект: Minesweeper (Диплом Яндекс.Практикума)</span
+            >
             <a
               href="https://github.com/mind-blowing-devs/mind-blowing-devs"
               target="_blank"
-              class="text-blue-600 hover:underline text-sm font-normal ml-2"
+              class="text-blue-600 hover:underline text-sm font-normal"
             >
               → GitHub
             </a>
           </div>
           <div class="text-sm text-gray-500 mb-2">
-            Май 2025 | React, TypeScript, Next.js 15 (App Router)
+            2025 | Backend: Node.js, Express, PostgreSQL, Sequelize | Frontend:
+            React, TypeScript, Redux
           </div>
-          <p class="text-gray-700 text-sm">
-            Полноценное веб-приложение с авторизацией, серверным рендерингом и
-            кэшированием данных. Демонстрация работы с современным стеком.
-          </p>
+          <ul
+            class="list-disc list-inside space-y-1 text-gray-700 text-sm mt-2"
+          >
+            <li>
+              <b>Backend:</b> Разработал REST API с нуля: аутентификация (OAuth
+              Яндекс), профиль пользователя, лидерборд, форум
+            </li>
+            <li>
+              <b>Database:</b> Спроектировал реляционную схему PostgreSQL,
+              настроил Sequelize ORM (модели, миграции, ассоциации)
+            </li>
+            <li>
+              <b>Security:</b> Реализовал JWT-токены, защиту от XSS и
+              SQL-инъекций, CSP заголовки
+            </li>
+            <li>
+              <b>Frontend:</b> React + TypeScript + Redux, Canvas API для
+              игрового поля, Service Workers (офлайн-режим)
+            </li>
+          </ul>
         </div>
+
+        <!-- 
+        <div class="border-l-4 border-blue-600 pl-4 py-2 mb-6">
+          <div class="font-bold text-gray-900 flex flex-col md:flex-row md:items-center gap-2">
+            <span>Countries Explorer (Demo / Open Source)</span>
+            <a href="https://github.com/Pikaev/countries-explorer" target="_blank" class="text-blue-600 hover:underline text-sm font-normal">→ GitHub</a>
+          </div>
+          <div class="text-sm text-gray-500 mb-2">Июнь 2026 | Next.js 16, React 19, TypeScript, Tailwind 4, Zustand, Playwright, Zod</div>
+          <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm mt-2">
+            <li>Спроектировал архитектуру с чётким разделением Server/Client компонентов (SSR для данных, Client для интерактива).</li>
+            <li>Внедрил ISR и кастомную валидацию API через Zod (fail-fast стратегия).</li>
+            <li>Реализовал сложный клиентский стейт через Zustand, осознанно отказавшись от URL-params.</li>
+            <li>Покрыл критические пути E2E-тестами на Playwright, настроил CI/CD пайплайн.</li>
+          </ul>
+        </div> 
+        -->
       </section>
 
       <section class="mb-10 print-break">
@@ -504,10 +568,6 @@
           <li>Аккредитованные IT-компании (Поволжье, регионы РФ)</li>
           <li>Полная занятость, долгосрочное сотрудничество</li>
           <li>Гибридные роли: Frontend + QA Automation</li>
-          <li>
-            Готов к переходу на Angular: понимаю компонентную архитектуру, 
-            строгую типизацию и реактивные паттерны. Смогу быстро войти в стек.
-          </li>
         </ul>
       </section>
 
@@ -540,7 +600,7 @@
                 feedbackId,
                 setTimeout(() => {
                   feedback.classList.add('opacity-0')
-                }, 1200)
+                }, 1200),
               )
             } catch (error) {
               console.error('Failed to copy contact:', error)
